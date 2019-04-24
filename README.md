@@ -1,0 +1,1 @@
+# Default theme for the MIDL website builder
