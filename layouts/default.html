@@ -1,15 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="generator" content="MWB v{{ mwb.version }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="stylesheet" href="{{ stylesheets.default.path }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Condensed">
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script>
+        jQuery(function($) {
+            var $nav = $('#sidebar nav ul');
+            $('#sidebar nav .toggle button').click(function() {
+                $nav.slideToggle('fast');
+            });
+        });
+    </script>
 
     <title>{% if title is defined %} {{ title }} | {% endif %}{{ config.title }}</title>
 </head>
 <body>
-{{ content }}
+    <div id="content">
+        <div id="sidebar">
+            <h1>
+                <a href="/" alt="{{ config.title }}">
+                    <img src="/static/assets/logos/logo_white.svg" alt="{{ config.title }}">
+                </a>
+            </h1>
+            <nav>
+                <div class="toggle">
+                    <button aria-label="Open/close navigation"><span class="dashicons dashicons-menu"></span></button>
+                </div>
+                <ul>
+                    {{ for page in config.nav }}
+                    <li>
+                        <a href="{{ page.path }}">
+                            <span class="dashicons dashicons-{{ path.icon }}"></span>
+                            {{ page.title }}
+                        </a>
+                    </li>
+                    {{ enfor }}
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <div id="page">
+                {{ content }}
+            </div>
+        </main>
+    </div>
 </body>
 </html>

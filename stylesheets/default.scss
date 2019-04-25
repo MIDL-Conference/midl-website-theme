@@ -1,5 +1,138 @@
+@import 'normalize';
 @import 'dashicons';
+
+$primary-color: #506775;
+$nav-border: 1px solid rgba(255, 255, 255, 0.1);
 
 body {
   background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#content {
+  opacity: 0.96;
+
+  @media (min-width: 900px) and (max-width: 1199px) {
+    display: block;
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+  }
+}
+
+#sidebar {
+  background: $primary-color;
+
+  @media (min-width: 1200px) {
+    flex: 0 0 300px;
+  }
+
+  h1 {
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+
+    img {
+      width: 200px;
+    }
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: block;
+        border-bottom: $nav-border;
+
+        &:first-child {
+          border-top: $nav-border;
+
+          @media (max-width: 1199px) {
+            border-top: none;
+          }
+        }
+
+        a {
+          line-height: 40px;
+          padding: 10px 25px;
+          font-size: 12px;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          color: white;
+
+          &:hover, &:focus, .current {
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+
+      @media (max-width: 1199px) {
+        display: none;
+      }
+
+      @media (min-width: 1200px) {
+        display: block !important;
+      }
+    }
+
+    .toggle {
+      text-align: right;
+
+      border-top: $nav-border;
+      border-bottom: $nav-border;
+
+      @media (min-width: 1200px) {
+        display: none;
+      }
+
+      button {
+        color: white;
+        outline: none;
+        background: transparent;
+        box-shadow: none;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        cursor: pointer;
+        border-top: none;
+        border-bottom: none;
+        border-left: $nav-border;
+        border-right: none;
+      }
+    }
+  }
+}
+
+main {
+  background: white;
+  color: #444444;
+
+  @media (min-width: 1200px) {
+    flex: 0 0 900px;
+  }
+
+  #page {
+    padding: 80px 90px;
+
+    h1 {
+      font-family: 'Lato', 'Trebuchet MS', sans-serif;
+      font-size: 46px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 13px;
+    }
+  }
 }
