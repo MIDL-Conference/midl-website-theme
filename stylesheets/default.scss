@@ -76,6 +76,13 @@ body {
           &:hover, &:focus, .current {
             color: rgba(255, 255, 255, 0.5);
           }
+
+          .dashicons {
+            line-height: 40px;
+            font-size: 1.2em;
+            margin-top: -.15em;
+            margin-right: 0.25em;
+          }
         }
       }
 
@@ -132,7 +139,11 @@ main {
       font-size: 46px;
       text-align: center;
       margin-top: 0;
-      margin-bottom: 13px;
+      margin-bottom: 42px;
+    }
+
+    p {
+      margin: 0 0 13px 0;
     }
   }
 }
