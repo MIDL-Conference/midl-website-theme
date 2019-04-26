@@ -170,13 +170,60 @@ main {
     h1 {
       font-family: 'Lato', 'Trebuchet MS', sans-serif;
       font-size: 46px;
+      font-weight: bold;
       text-align: center;
       margin-top: 0;
       margin-bottom: 42px;
     }
 
+    h2, h3 {
+      font-family: 'Lato', 'Trebuchet MS', sans-serif;
+      font-weight: normal;
+      margin-top: 26px;
+      margin-bottom: 13px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h4, h5, h6 {
+      font-family: 'Roboto Slab', 'Roboto', Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      margin-top: 13px;
+      margin-bottom: 13px;
+      line-height: 1.2;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    h5 {
+      font-size: 16px;
+    }
+
+    h6 {
+      font-family: 'Roboto', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+    }
+
     p {
       margin: 0 0 13px 0;
+
+      .extra-spacing {
+        margin-bottom: 26px;
+      }
+    }
+
+    ul, ol {
+      margin-top: 0;
+      margin-bottom: 13px;
     }
 
     a {
@@ -191,5 +238,40 @@ main {
         color: $link-active-color;
       }
     }
+
+    a.button {
+      $button-color-top: lighten(saturate(adjust-hue($primary-color, -1), 19.5), 14.35);
+      $button-color-top-hover: lighten(saturate($button-color-top, 3.75), 2.35);
+      $button-color-bottom: $primary-color;
+      $button-color-bottom-hover: $button-color-bottom;
+
+      /* Fallback colors for browsers that don't support gradients */
+      $button-color: lighten(saturate(adjust-hue($button-color-bottom, -1), 8.5), 10.75);
+      $button-color-hover: $button-color-top-hover;
+
+      color: white;
+      background: $button-color;
+      background-image: linear-gradient(to bottom, $button-color-top, $button-color-bottom);
+      border-radius: 12px;
+      font-family: 'Lato', 'Trebuchet MS', sans-serif;
+      font-style: normal;
+      font-size: 16px;
+      padding: 9px 20px 11px 20px;
+      text-decoration: none;
+      border-width: 0;
+      line-height: 2.5;
+      white-space: nowrap;
+
+      &:hover, &:active, &:focus {
+        background: $button-color-hover;
+        background-image: linear-gradient(to bottom, $button-color-top-hover, $button-color-bottom-hover);
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    .center {
+       text-align: center;
+     }
   }
 }
