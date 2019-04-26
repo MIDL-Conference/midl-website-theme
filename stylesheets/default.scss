@@ -3,9 +3,9 @@
 
 $primary-color: #506775 !default;
 $text-color: #444444;
-$link-color: #3699dc !default;
-$link-hover-color: darken(saturate($link-color, 0.22), 15) !default;
-$link-active-color: lighten(saturate($link-color, 0.22), 10) !default;
+$link-color: saturate(lighten($primary-color, 7), 40) !default;
+$link-hover-color: darken($link-color, 20) !default;
+$link-active-color: saturate($link-color, 10) !default;
 
 $nav-border: 1px solid rgba(255, 255, 255, 0.1);
 
