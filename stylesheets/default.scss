@@ -159,13 +159,15 @@ body {
 main {
   background: white;
   color: $text-color;
+  line-height: 1.575;
+  border-top: 1px solid #F9F9F9;
 
   @media (min-width: 1200px) {
     flex: 0 0 900px;
   }
 
   #page {
-    padding: 80px 90px;
+    padding: 60px 90px 80px 90px;
 
     h1 {
       font-family: 'Lato', 'Trebuchet MS', sans-serif;
@@ -174,6 +176,7 @@ main {
       text-align: center;
       margin-top: 0;
       margin-bottom: 42px;
+      line-height: 1.2;
     }
 
     h2, h3 {
