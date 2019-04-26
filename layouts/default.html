@@ -35,9 +35,9 @@
                 </div>
                 <ul>
                     {% for page in config.nav %}
-                    <li>
+                    <li{% if page.path == permalink %} class="current"{% endif %}>
                         <a href="{{ page.path }}">
-                            <span class="dashicons dashicons-{{ page.icon }}"></span>
+                            <span class="dashicons dashicons-{{ page.icon }}" aria-hidden="True"></span>
                             {{ page.title }}
                         </a>
                     </li>
