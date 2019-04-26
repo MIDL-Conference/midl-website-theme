@@ -1,7 +1,8 @@
 @import 'normalize';
 @import 'dashicons';
 
-$primary-color: #506775;
+$primary-color: #506775 !default;
+$text-color: #444444;
 $nav-border: 1px solid rgba(255, 255, 255, 0.1);
 
 body {
@@ -80,7 +81,7 @@ body {
           .dashicons {
             line-height: 40px;
             font-size: 1.2em;
-            margin-top: -.15em;
+            margin-top: -0.05em;
             margin-right: 0.25em;
           }
         }
@@ -125,7 +126,7 @@ body {
 
 main {
   background: white;
-  color: #444444;
+  color: $text-color;
 
   @media (min-width: 1200px) {
     flex: 0 0 900px;
