@@ -233,6 +233,13 @@ main {
       margin-bottom: 13px;
     }
 
+    hr {
+      margin-top: 26px;
+      margin-bottom: 26px;
+      border: 0;
+      border-top: 1px solid #EEEEEE;
+    }
+
     a {
       color: $link-color;
       text-decoration: none;
@@ -247,9 +254,10 @@ main {
     }
 
     a.button {
-      $button-color-top: lighten(saturate(adjust-hue($primary-color, -1), 19.5), 14.35);
+      $button-base-color: $primary-color !default;
+      $button-color-top: lighten(saturate(adjust-hue($button-base-color, -1), 19.5), 14.35);
       $button-color-top-hover: lighten(saturate($button-color-top, 3.75), 2.35);
-      $button-color-bottom: $primary-color;
+      $button-color-bottom: $button-base-color;
       $button-color-bottom-hover: $button-color-bottom;
 
       /* Fallback colors for browsers that don't support gradients */
