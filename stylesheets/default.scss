@@ -130,8 +130,7 @@ body {
 
     .toggle {
       text-align: right;
-
-      border-top: $nav-border;
+      margin-top: -50px;
       border-bottom: $nav-border;
 
       @media (min-width: 1200px) {
@@ -143,14 +142,16 @@ body {
         outline: none;
         background: transparent;
         box-shadow: none;
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+        width: 60px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 1;
         cursor: pointer;
-        border-top: none;
-        border-bottom: none;
-        border-left: $nav-border;
-        border-right: none;
+        border: none;
+
+        .dashicons {
+          font-size: 24px;
+        }
       }
     }
   }
