@@ -3,7 +3,12 @@
 
 $primary-color: #506775 !default;
 $text-color: #444444;
+$link-color: #3699dc !default;
+$link-hover-color: darken(saturate($link-color, 0.22), 15) !default;
+$link-active-color: lighten(saturate($link-color, 0.22), 10) !default;
+
 $nav-border: 1px solid rgba(255, 255, 255, 0.1);
+
 
 body {
   background: #F6F6F6;
@@ -172,6 +177,19 @@ main {
 
     p {
       margin: 0 0 13px 0;
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        color: $link-hover-color;
+      }
+
+      &:active {
+        color: $link-active-color;
+      }
     }
   }
 }
