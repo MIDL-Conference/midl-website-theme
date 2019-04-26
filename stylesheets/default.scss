@@ -192,7 +192,7 @@ main {
       font-size: 24px;
     }
 
-    h4, h5, h6 {
+    h4, h5 {
       font-family: 'Roboto Slab', 'Roboto', Helvetica, Arial, sans-serif;
       font-weight: normal;
       margin-top: 13px;
@@ -211,6 +211,10 @@ main {
     h6 {
       font-family: 'Roboto', Helvetica, Arial, sans-serif;
       font-size: 15px;
+      font-weight: bold;
+      margin-top: 13px;
+      margin-bottom: 13px;
+      line-height: 1.15;
     }
 
     p {
