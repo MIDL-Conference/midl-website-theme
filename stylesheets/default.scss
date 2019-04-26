@@ -170,6 +170,14 @@ main {
   #page {
     padding: 60px 90px 80px 90px;
 
+    @media (min-width: 900px) and (max-width: 1199px) {
+      padding: 50px 60px 65px 60px;
+    }
+
+    @media (max-width: 899px) {
+      padding: 35px 30px 45px 30px;
+    }
+
     h1 {
       font-family: 'Lato', 'Trebuchet MS', sans-serif;
       font-size: 46px;
@@ -178,6 +186,16 @@ main {
       margin-top: 0;
       margin-bottom: 42px;
       line-height: 1.2;
+
+      @media (max-width: 1199px) {
+        font-size: 38px;
+        margin-bottom: 34px;
+      }
+
+      @media (max-width: 899px) {
+        font-size: 30px;
+        margin-bottom: 26px;
+      }
     }
 
     h2, h3 {
@@ -190,10 +208,30 @@ main {
 
     h2 {
       font-size: 30px;
+
+      @media (max-width: 1199px) {
+        font-size: 26px;
+        margin-top: 24px;
+      }
+
+      @media (max-width: 899px) {
+        font-size: 22px;
+        margin-top: 22px;
+      }
     }
 
     h3 {
       font-size: 24px;
+
+      @media (max-width: 1199px) {
+        font-size: 22px;
+        margin-top: 22px;
+      }
+
+      @media (max-width: 899px) {
+        font-size: 20px;
+        margin-top: 20px;
+      }
     }
 
     h4, h5 {
@@ -206,10 +244,22 @@ main {
 
     h4 {
       font-size: 18px;
+
+      @media (max-width: 1199px) {
+        font-size: 17px;
+      }
+
+      @media (max-width: 899px) {
+        font-size: 16px;
+      }
     }
 
     h5 {
       font-size: 16px;
+
+      @media (max-width: 1199px) {
+        font-size: 15px;
+      }
     }
 
     h6 {
@@ -219,6 +269,10 @@ main {
       margin-top: 13px;
       margin-bottom: 13px;
       line-height: 1.15;
+
+      @media (max-width: 899px) {
+        font-size: 14px;
+      }
     }
 
     p {
