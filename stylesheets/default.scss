@@ -96,7 +96,7 @@ body {
 
           color: white;
 
-          &:hover, &:focus, .current {
+          &:hover, &:focus, &.current {
             color: rgba(255, 255, 255, 0.5);
           }
 
