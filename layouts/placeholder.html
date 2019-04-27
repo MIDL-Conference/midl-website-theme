@@ -1,0 +1,15 @@
+{% extends "_skeleton.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ stylesheets.placeholder.path }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+{% endblock %}
+
+{% block body %}
+<div id="content">
+    <p id="logo">
+        <img src="/assets/logos/logo_white.svg" alt="{{ config.title|e }}">
+    </p>
+    {{ content }}
+</div>
+{% endblock %}

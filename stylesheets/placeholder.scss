@@ -1,0 +1,31 @@
+@import 'normalize';
+
+$primary-color: #506775 !default;
+
+
+body {
+  background: $primary-color;
+  color: white;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#content {
+  padding: 60px 20px;
+  text-align: center;
+  line-height: 1.575;
+
+  p {
+    margin: 0 0 13px 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+#logo {
+  img {
+    width: 200px;
+  }
+}
