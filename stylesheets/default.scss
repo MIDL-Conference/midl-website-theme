@@ -180,21 +180,21 @@ main {
 
     h1 {
       font-family: 'Lato', 'Trebuchet MS', sans-serif;
-      font-size: 46px;
+      font-size: 36px;
       font-weight: bold;
       text-align: center;
       margin-top: 0;
-      margin-bottom: 42px;
+      margin-bottom: 32px;
       line-height: 1.2;
 
       @media (max-width: 1199px) {
-        font-size: 38px;
-        margin-bottom: 34px;
+        font-size: 28px;
+        margin-bottom: 24px;
       }
 
       @media (max-width: 899px) {
-        font-size: 30px;
-        margin-bottom: 26px;
+        font-size: 20px;
+        margin-bottom: 16px;
       }
     }
 
