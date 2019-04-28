@@ -218,10 +218,6 @@ main {
         font-size: 22px;
         margin-top: 22px;
       }
-
-      &.topmost {
-        margin-top: 0;
-      }
     }
 
     h3 {
@@ -276,6 +272,12 @@ main {
 
       @media (max-width: 899px) {
         font-size: 14px;
+      }
+    }
+
+    h2, h3, h4, h5, h6 {
+      + &, &.topmost {
+        margin-top: 0;
       }
     }
 
