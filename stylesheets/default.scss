@@ -275,7 +275,7 @@ main {
     }
 
     h1, h2, h3, h4, h5, h6 {
-      + &, &.topmost {
+      &:first-child, &.topmost {
         margin-top: 0; /* top most heading should not have any top margin since there is usually nothing above */
       }
     }
