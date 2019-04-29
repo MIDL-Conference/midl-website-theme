@@ -16,16 +16,18 @@ body {
 
   p {
     margin: 0 0 13px 0;
+
+    &.logo {
+      margin-bottom: 26px;
+
+      img {
+        width: 200px;
+      }
+    }
   }
 
   a {
     color: white;
     text-decoration: underline;
-  }
-}
-
-#logo {
-  img {
-    width: 200px;
   }
 }
