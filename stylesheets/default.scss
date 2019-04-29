@@ -217,6 +217,25 @@ main {
         font-size: 22px;
         margin-top: 22px;
       }
+
+      .sponsors {
+        @mixin sponsorship-level($color) {
+          border-bottom: 3px solid $color;
+        }
+
+        &.platinum {
+          @include sponsorship-level(#E5E4E2);
+        }
+        &.gold {
+          @include sponsorship-level(#D4AF37);
+        }
+        &.silver {
+          @include sponsorship-level(#C0C0C0);
+        }
+        &.bronze {
+          @include sponsorship-level(#CD7F32);
+        }
+      }
     }
 
     h3 {
@@ -230,6 +249,14 @@ main {
       @media (max-width: 899px) {
         font-size: 20px;
         margin-top: 20px;
+      }
+
+      .sponsors {
+        &.amount {
+          font-size: 82.5%;
+          position: relative;
+          top: -5px;
+        }
       }
     }
 
