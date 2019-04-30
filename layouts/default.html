@@ -38,6 +38,21 @@
                 {% endfor %}
             </ul>
         </nav>
+
+        {% if config.twitter is defined and config.twitter|length %}
+            <div class="tweets">
+                <a data-lang="en"
+                   data-width="250"
+                   data-dnt="true"
+                   data-theme="dark"
+                   data-link-color="#FFFFFF"
+                   data-tweet-limit="1"
+                   data-chrome="noheader nofooter noborders transparent"
+                   href="https://twitter.com/{{ config.twitter }}?ref_src=twsrc%5Etfw"
+                   class="twitter-timeline">Tweets by {{ config.twitter }}</a>
+            </div>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {% endif %}
     </div>
     <main>
         <div id="page">
