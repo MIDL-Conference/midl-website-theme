@@ -10,6 +10,10 @@ $link-active-color: saturate($link-color, 10) !default;
 $nav-border: 1px solid rgba(255, 255, 255, 0.1);
 
 
+b, strong {
+  font-weight: bold; /* normalized to "bolder", which can have undesired side effects */
+}
+
 body {
   background: #F6F6F6;
   display: flex;
@@ -172,7 +176,7 @@ body {
 main {
   background: white;
   color: $text-color;
-  line-height: 1.575;
+  line-height: 1.625;
   border-top: 1px solid #F9F9F9;
 
   @media (min-width: 1200px) {
