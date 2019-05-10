@@ -333,6 +333,20 @@ main {
       margin-bottom: 13px;
     }
 
+    .timeline {
+      margin-bottom: 3px;
+
+      ul, ol {
+        li {
+          margin-top: 6px;
+        }
+
+        li:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
     hr {
       margin-top: 26px;
       margin-bottom: 26px;
