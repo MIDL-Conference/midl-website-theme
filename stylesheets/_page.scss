@@ -1,0 +1,233 @@
+h1 {
+  font-family: 'Lato', 'Trebuchet MS', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 6px;  /* only a little bit of top margin because this element is usually the very first */
+  margin-bottom: 32px;
+  line-height: 1.2;
+
+  @media (max-width: 1199px) {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: 899px) {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  &.midl {
+    text-align: center;
+  }
+}
+
+h2, h3 {
+  font-family: 'Lato', 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  margin-top: 26px;
+  margin-bottom: 13px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 26px;
+
+  @media (max-width: 1199px) {
+    font-size: 24px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 899px) {
+    font-size: 22px;
+    margin-top: 22px;
+  }
+
+  .sponsors {
+    @mixin sponsorship-level($color) {
+      border-bottom: 3px solid $color;
+    }
+
+    &.platinum {
+      @include sponsorship-level(#E5E4E2);
+    }
+    &.gold {
+      @include sponsorship-level(#D4AF37);
+    }
+    &.silver {
+      @include sponsorship-level(#C0C0C0);
+    }
+    &.bronze {
+      @include sponsorship-level(#CD7F32);
+    }
+  }
+
+  &.midl {
+    text-align: center;
+    font-size: 32px;
+
+    @media (max-width: 1199px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 899px) {
+      font-size: 24px;
+    }
+  }
+}
+
+h3 {
+  font-size: 23px;
+
+  @media (max-width: 1199px) {
+    font-size: 21px;
+    margin-top: 21px;
+  }
+
+  @media (max-width: 899px) {
+    font-size: 19px;
+    margin-top: 19px;
+  }
+
+  .sponsors {
+    &.amount {
+      font-size: 82.5%;
+      position: relative;
+      top: -5px;
+    }
+  }
+}
+
+h4, h5 {
+  font-family: 'Roboto Slab', 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 18px;
+
+  @media (max-width: 1199px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 899px) {
+    font-size: 16px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+
+  @media (max-width: 1199px) {
+    font-size: 15px;
+  }
+}
+
+h6 {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  line-height: 1.15;
+
+  @media (max-width: 899px) {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &:first-child, &.topmost {
+    margin-top: 0; /* top most heading should not have any top margin since there is usually nothing above */
+  }
+}
+
+p {
+  margin: 0 0 13px 0;
+
+  .extra-spacing {
+    margin-bottom: 26px;
+  }
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+.timeline {
+  margin-bottom: 3px;
+
+  ul, ol {
+    li {
+      margin-top: 6px;
+    }
+
+    li:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+hr {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  border: 0;
+  border-top: 1px solid #EEEEEE;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $link-hover-color;
+  }
+
+  &:active {
+    color: $link-active-color;
+  }
+}
+
+a.button {
+  $button-base-color: $primary-color !default;
+  $button-color-top: lighten(saturate(adjust-hue($button-base-color, -1), 19.5), 14.35);
+  $button-color-top-hover: lighten(saturate($button-color-top, 3.75), 2.35);
+  $button-color-bottom: $button-base-color;
+  $button-color-bottom-hover: $button-color-bottom;
+
+  /* Fallback colors for browsers that don't support gradients */
+  $button-color: lighten(saturate(adjust-hue($button-color-bottom, -1), 8.5), 10.75);
+  $button-color-hover: $button-color-top-hover;
+
+  color: white;
+  background: $button-color;
+  background-image: linear-gradient(to bottom, $button-color-top, $button-color-bottom);
+  border-radius: 12px;
+  font-family: 'Lato', 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  padding: 9px 20px 11px 20px;
+  text-decoration: none;
+  border-width: 0;
+  line-height: 2.5;
+  white-space: nowrap;
+
+  &:hover, &:active, &:focus {
+    background: $button-color-hover;
+    background-image: linear-gradient(to bottom, $button-color-top-hover, $button-color-bottom-hover);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.centered {
+  text-align: center;
+}
