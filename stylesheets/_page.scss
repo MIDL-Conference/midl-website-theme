@@ -244,3 +244,22 @@ img {
 .centered {
   text-align: center;
 }
+
+.sponsor-logos {
+  margin-bottom: 35px;
+
+  p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @media (max-width: 499px) {
+      flex-direction: column;
+    }
+  }
+
+  img {
+    margin: 10px 30px 10px 0;
+  }
+}
