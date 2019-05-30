@@ -219,6 +219,19 @@ img {
   text-align: center;
 }
 
+.youtube {
+  margin: 2rem 0;
+
+  @at-root iframe[src*="youtube"] {
+    max-width: 100%;
+
+    @media (max-width: 899px){
+      width: 84vw;
+      height: 47.25vw;
+    }
+  }
+}
+
 &.sponsors {
   h2 {
     @mixin sponsorship-level($color) {
