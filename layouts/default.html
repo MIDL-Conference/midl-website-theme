@@ -55,7 +55,7 @@
         {% endif %}
     </div>
     <main>
-        <div id="page">
+        <div id="page"{% if page_class is defined %} class="{{ page_class }}"{% endif %}>
             {{ content }}
         </div>
     </main>

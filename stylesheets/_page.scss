@@ -19,6 +19,7 @@ h1 {
 
   &.midl {
     text-align: center;
+    margin-bottom: -4px;
   }
 }
 
@@ -41,25 +42,6 @@ h2 {
   @media (max-width: 899px) {
     font-size: 22px;
     margin-top: 22px;
-  }
-
-  .sponsors {
-    @mixin sponsorship-level($color) {
-      border-bottom: 3px solid $color;
-    }
-
-    &.platinum {
-      @include sponsorship-level(#E5E4E2);
-    }
-    &.gold {
-      @include sponsorship-level(#D4AF37);
-    }
-    &.silver {
-      @include sponsorship-level(#C0C0C0);
-    }
-    &.bronze {
-      @include sponsorship-level(#CD7F32);
-    }
   }
 
   &.midl {
@@ -87,14 +69,6 @@ h3 {
   @media (max-width: 899px) {
     font-size: 19px;
     margin-top: 19px;
-  }
-
-  .sponsors {
-    &.amount {
-      font-size: 82.5%;
-      position: relative;
-      top: -5px;
-    }
   }
 }
 
@@ -245,21 +219,50 @@ img {
   text-align: center;
 }
 
-.sponsor-logos {
-  margin-bottom: 35px;
+&.sponsors {
+  h2 {
+    @mixin sponsorship-level($color) {
+      border-bottom: 3px solid $color;
+    }
 
-  p {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    @media (max-width: 499px) {
-      flex-direction: column;
+    .platinum {
+      @include sponsorship-level(#E5E4E2);
+    }
+    .gold {
+      @include sponsorship-level(#D4AF37);
+    }
+    .silver {
+      @include sponsorship-level(#C0C0C0);
+    }
+    .bronze {
+      @include sponsorship-level(#CD7F32);
     }
   }
 
-  img {
-    margin: 10px 30px 10px 0;
+  h3 {
+    .amount {
+      font-size: 82.5%;
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  .logos {
+    margin-bottom: 35px;
+
+    p {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      @media (max-width: 499px) {
+        flex-direction: column;
+      }
+    }
+
+    img {
+      margin: 10px 30px 10px 0;
+    }
   }
 }
