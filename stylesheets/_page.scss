@@ -302,9 +302,11 @@ iframe[src*="youtube"] {
     }
 
     & + p {
-      display: flex;
-      align-items: start;
-      flex-direction: row-reverse;
+      @media (min-width: 500px) {
+        display: flex;
+        align-items: start;
+        flex-direction: row-reverse;
+      }
 
       img {
         @extend img.align-right;
