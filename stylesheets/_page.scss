@@ -242,6 +242,7 @@ iframe[src*="youtube"] {
   }
 }
 
+/* Page classes */
 &.sponsors {
   h2 {
     @mixin sponsorship-level($color) {
@@ -286,6 +287,28 @@ iframe[src*="youtube"] {
 
     img {
       margin: 10px 30px 10px 0;
+    }
+  }
+}
+
+&.keynotes {
+  h3 {
+    font-size: 17px;
+    margin-top: -2px;
+    margin-bottom: 17px;
+
+    & + h3 {
+      margin-top: -8px;
+    }
+
+    & + p {
+      display: flex;
+      align-items: start;
+      flex-direction: row-reverse;
+
+      img {
+        @extend img.align-right;
+      }
     }
   }
 }
