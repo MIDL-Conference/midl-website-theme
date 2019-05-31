@@ -205,6 +205,16 @@ a.button {
 
 img {
   max-width: 100%;
+
+  &.align-left {
+    float: left;
+    margin: 5px 20px 5px 0;
+  }
+
+  &.align-right {
+    float: right;
+    margin: 5px 0 5px 20px;
+  }
 }
 
 .credits {
