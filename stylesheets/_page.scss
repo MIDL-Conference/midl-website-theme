@@ -264,6 +264,11 @@ iframe[src*="youtube"] {
   p {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+
+    @media (max-width: 499px) {
+      flex-direction: column;
+    }
 
     .impression {
       display: inline-block;
