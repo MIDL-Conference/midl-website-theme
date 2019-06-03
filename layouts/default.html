@@ -35,7 +35,7 @@
                 {% for page in config.nav %}
                 <li>
                     <a href="{{ page.path }}"{% if page.path == permalink %} class="current"{% endif %}>
-                        <span class="fas fa-{{ page.icon }}" aria-hidden="True"></span>
+                        <span class="icon fas fa-{{ page.icon }}" aria-hidden="True"></span>
                         {{ page.title }}
                     </a>
                 </li>

@@ -115,7 +115,7 @@ body {
             color: rgba(255, 255, 255, 0.5);
           }
 
-          .dashicons {
+          .icon {
             line-height: 40px;
             font-size: 1.2em;
             margin-top: -0.05em;
@@ -126,7 +126,7 @@ body {
           }
 
           &:active {
-            .dashicons {
+            .icon {
               background: transparent;
             }
           }
