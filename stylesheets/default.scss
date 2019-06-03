@@ -104,7 +104,7 @@ body {
 
         a {
           line-height: 40px;
-          padding: 10px 25px;
+          padding: 10px 25px 10px 30px;
           font-size: 12px;
           text-transform: uppercase;
           text-decoration: none;
@@ -117,9 +117,7 @@ body {
 
           .icon {
             line-height: 40px;
-            font-size: 1.2em;
-            margin-top: -0.05em;
-            margin-right: 0.25em;
+            margin-right: 8px;
 
             /* remove highlighting in mobile browsers when tapping on the link */
             -webkit-tap-highlight-color: transparent !important;
