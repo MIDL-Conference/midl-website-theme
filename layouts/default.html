@@ -2,6 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ stylesheets.default.path }}">
+<link rel="stylesheet" href="{{ stylesheets.fontawesome.path }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Slab|Roboto+Condensed">
 
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
@@ -34,7 +35,7 @@
                 {% for page in config.nav %}
                 <li>
                     <a href="{{ page.path }}"{% if page.path == permalink %} class="current"{% endif %}>
-                        <span class="dashicons dashicons-{{ page.icon }}" aria-hidden="True"></span>
+                        <span class="fas fa-{{ page.icon }}" aria-hidden="True"></span>
                         {{ page.title }}
                     </a>
                 </li>
