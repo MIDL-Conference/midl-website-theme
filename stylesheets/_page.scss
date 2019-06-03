@@ -258,6 +258,20 @@ iframe[src*="youtube"] {
   }
 }
 
+.impressions {
+  margin: 19px 0;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+
+    .impression {
+      display: inline-block;
+      margin: 0 1% 0 0;
+    }
+  }
+}
+
 /* Page classes */
 &.sponsors {
   h2 {
