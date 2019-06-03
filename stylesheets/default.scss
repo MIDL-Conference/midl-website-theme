@@ -118,6 +118,8 @@ body {
           .icon {
             line-height: 40px;
             margin-right: 8px;
+            text-align: center;
+            width: 16px;
 
             /* remove highlighting in mobile browsers when tapping on the link */
             -webkit-tap-highlight-color: transparent !important;
