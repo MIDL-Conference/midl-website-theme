@@ -11,5 +11,9 @@
         <img src="/assets/logos/logo_white.svg" alt="{{ config.title|e }}">
     </p>
     {{ content }}
+
+    {% block footer %}
+        {% include "_footer.html" %}
+    {% endblock %}
 </div>
 {% endblock %}

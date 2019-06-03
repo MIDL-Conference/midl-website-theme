@@ -1,0 +1,20 @@
+#platforms {
+  margin: 4em 0 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 12px;
+
+    a {
+      color: $text-color;
+      opacity: 0.85;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

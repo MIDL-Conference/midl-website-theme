@@ -43,7 +43,7 @@
             </ul>
         </nav>
 
-        {% if config.twitter is defined and config.twitter|length %}
+        {% if config.show_twitter_feed %}
             <div class="tweets">
                 <a data-lang="en"
                    data-width="250"
@@ -61,6 +61,10 @@
     <main>
         <div id="page"{% if page_class is defined %} class="{{ page_class }}"{% endif %}>
             {{ content }}
+
+            {% block footer %}
+                {% include "_footer.html" %}
+            {% endblock %}
         </div>
     </main>
 </div>

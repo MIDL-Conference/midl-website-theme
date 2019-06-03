@@ -1,11 +1,12 @@
 @import 'normalize';
 
 $primary-color: #506775 !default;
+$text-color: white;
 
 
 body {
   background: $primary-color;
-  color: white;
+  color: $text-color;
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -27,7 +28,9 @@ body {
   }
 
   a {
-    color: white;
+    color: $text-color;
     text-decoration: underline;
   }
+
+  @import 'footer';
 }
