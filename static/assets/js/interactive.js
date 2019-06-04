@@ -1,19 +1,19 @@
 jQuery(function($) {
-    var $nav = $('#sidebar nav ul');
+    let $nav = $('#sidebar nav ul');
     $('#sidebar nav .toggle button').click(function() {
         $nav.slideToggle('fast');
     });
 
     $('.toggle_visibility').click(function() {
-        var self = $(this);
-        var selector = self.data('selector');
-        var level = self.data('level');
+        let self = $(this);
+        let selector = self.data('selector');
+        let level = self.data('level');
 
-        var rootElement = self;
+        let rootElement = self;
         if (typeof level == 'undefined') {
             level = 1;
         }
-        for (var i = 0; i < parseInt(level); ++i) {
+        for (let i = 0; i < parseInt(level); ++i) {
             rootElement = rootElement.parent();
         }
 
