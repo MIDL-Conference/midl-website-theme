@@ -1,16 +1,32 @@
 {% if config.show_platform_icons %}
     <ul id="platforms">
+        {% if config.twitter is defined %}
         <li>
             <a href="https://twitter.com/{{ config.twitter }}"><i class="fab fa-twitter" title="MIDL on Twitter"></i></a>
         </li>
+        {% endif %}
+        {% if config.youtube is defined %}
         <li>
             <a href="https://www.youtube.com/{{ config.youtube }}/videos"><i class="fab fa-youtube" title="MIDL on YouTube"></i></a>
         </li>
+        {% endif %}
+        {% if config.github %}
         <li>
             <a href="https://github.com/{{ config.github }}"><i class="fab fa-github" title="MIDL on GitHub"></i></a>
         </li>
+        {% endif %}
+        {% if config.openreview is defined %}
+        <li>
+            <a href="https://openreview.net/group?id={{ config.openreview }}"><i class="fas fa-book" title="MIDL on OpenReview"></i></a>
+        </li>
+        {% endif %}
         <li>
             <a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fab fa-creative-commons" title="CC BY-SA"></i></a>
         </li>
+        {% if config.email is defined %}
+        <li>
+            <a href="mailto:{{ config.email }}"><i class="fas fa-envelope" title="Send us an email"></i></a>
+        </li>
+        {% endif %}
     </ul>
 {% endif %}
