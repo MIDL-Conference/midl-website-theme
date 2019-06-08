@@ -398,6 +398,7 @@ iframe[src*="youtube"] {
 
       img {
         @extend img.align-right;
+        flex: 0 0 auto;
       }
     }
   }
