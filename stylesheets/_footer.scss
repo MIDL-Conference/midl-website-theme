@@ -4,6 +4,14 @@
   list-style: none;
   text-align: center;
 
+  @media (min-width: 900px) and (max-width: 1199px) {
+    margin-bottom: -0.9em;
+  }
+
+  @media (max-width: 899px) {
+    margin-bottom: -0.4em;
+  }
+
   li {
     display: inline-block;
     margin: 0 10px;
