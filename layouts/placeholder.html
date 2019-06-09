@@ -2,7 +2,9 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ stylesheets.placeholder.path }}">
-<link rel="stylesheet" href="{{ stylesheets.fontawesome.path }}">
+{% if config.show_platform_icons or load_icons is defined %}
+    <link rel="stylesheet" href="{{ stylesheets.fontawesome.path }}">
+{% endif %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 {% endblock %}
 
