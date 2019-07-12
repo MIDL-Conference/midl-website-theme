@@ -132,6 +132,16 @@ p {
   }
 }
 
+small {
+  font-size: 80%;
+}
+
+.small {
+  display: block;
+  line-height: 1.475;
+  font-size: 80%;
+}
+
 ul, ol {
   margin-top: 0;
   margin-bottom: 13px;
