@@ -10,3 +10,14 @@
     <span class="actions"><a class="toggle_visibility" data-level="2">Hide abstract</a></span>
   </span>
 {%- endmacro %}
+
+{% macro youtube(id, width=720, height=405) -%}
+<div class="youtube">
+  <iframe width="{{ width }}"
+          height="{{ height }}"
+          src="https://www.youtube-nocookie.com/embed/{{ id }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
+{%- endmacro %}
