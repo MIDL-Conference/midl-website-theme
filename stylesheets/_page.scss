@@ -390,6 +390,13 @@ iframe[src*="youtube"] {
 }
 
 &.keynotes {
+  h2 {
+    img {
+      @extend img.align-right;
+      max-width: 25vw;
+    }
+  }
+
   h3 {
     font-size: 17px;
     margin-top: -2px;
