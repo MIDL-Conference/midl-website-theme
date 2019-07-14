@@ -311,19 +311,27 @@ iframe[src*="youtube"] {
 
 .papers {
   ul {
-    list-style: none;
-    padding: 0;
-
-    li {
-      margin: 13px 0;
-    }
-
-    a {
-      cursor: pointer;
+    .title {
+      display: block;
+      font-weight: bold;
     }
 
     .authors {
       margin-right: 0.625em;
+    }
+
+    ul.links {
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline;
+      }
+
+      li + li:before {
+        content: ' • ';
+      }
     }
 
     .abstract {
@@ -338,6 +346,10 @@ iframe[src*="youtube"] {
         display: block;
         margin-top: 4px;
       }
+    }
+
+    a.toggle_visibility {
+      cursor: pointer;
     }
   }
 }
