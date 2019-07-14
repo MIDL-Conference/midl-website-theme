@@ -359,6 +359,16 @@ iframe[src*="youtube"] {
   }
 }
 
+.institutions {
+  margin-top: 20px;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 /* Page classes */
 &.sponsors {
   h2 {
