@@ -313,8 +313,12 @@ iframe[src*="youtube"] {
       margin: 8px 0;
 
       strong {
-        display: inline-block;
-        min-width: 250px;
+        display: block;
+
+        @media (min-width: 900px) {
+          display: inline-block;
+          min-width: 250px;
+        }
       }
     }
   }
