@@ -261,6 +261,14 @@ table.centered {
   text-align: center;
 }
 
+.message {
+  display: block;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: lighten($primary-color, 4.6);
+}
+
 .youtube {
   margin: 2rem 0;
 }
