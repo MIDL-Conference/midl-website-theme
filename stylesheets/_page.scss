@@ -227,6 +227,28 @@ img {
   }
 }
 
+code {
+  padding: 1px 2px;
+
+  background-color: #f9f9f9;
+  border: 1px solid #efefef;
+  border-radius: 2px;
+
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.84em;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+pre {
+  margin: 4px 0 13px 0;
+
+  code {
+    display: block;
+    padding: 3px 6px;
+  }
+}
+
 table.grid {
   border-collapse: collapse;
   margin-bottom: 13px;
