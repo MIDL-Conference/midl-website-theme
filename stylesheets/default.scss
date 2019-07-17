@@ -171,15 +171,20 @@ body {
   }
 
   .tweets {
-    margin: 46px auto 0 auto;
+    margin: 50px auto 0 auto;
     width: 250px;
 
     @media (max-width: 1199px) {
       display: none; /* there is no space for the twitter feed in the layout for mobile devices */
     }
 
-    a.twitter-timeline {
+    a.twitter-follow-button, a.twitter-timeline {
       display: none; /* placeholder element, is replaced by an iframe by twitter */
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto 16px auto;
     }
   }
 }

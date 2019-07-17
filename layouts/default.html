@@ -36,17 +36,27 @@
             </ul>
         </nav>
 
-        {% if config.show_twitter_feed %}
+        {% if config.show_twitter_button or config.show_twitter_feed %}
             <div class="tweets">
+                {% if config.show_twitter_button %}
                 <a data-lang="en"
-                   data-width="250"
                    data-dnt="true"
+                   data-show-count="false"
+                   data-size="large"
+                   href="https://twitter.com/{{ config.twitter }}"
+                   class="twitter-follow-button">Follow @{{ config.twitter }}</a>
+                {% endif %}
+                {% if config.show_twitter_feed %}
+                <a data-lang="en"
+                   data-dnt="true"
+                   data-width="250"
                    data-theme="dark"
                    data-link-color="#FFFFFF"
-                   data-tweet-limit="1"
+                   data-tweet-limit="{{ config.num_tweets_in_feed|default(1) }}"
                    data-chrome="noheader nofooter noborders transparent"
-                   href="https://twitter.com/{{ config.twitter }}?ref_src=twsrc%5Etfw"
+                   href="https://twitter.com/{{ config.twitter }}"
                    class="twitter-timeline">Tweets by {{ config.twitter }}</a>
+                {% endif %}
             </div>
             <script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>
         {% endif %}
