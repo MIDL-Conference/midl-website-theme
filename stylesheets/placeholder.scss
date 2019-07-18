@@ -19,7 +19,15 @@ body {
     margin: 0 0 13px 0;
 
     &.logo {
-      margin-bottom: 6vh;
+      margin-bottom: 2.65em;
+
+      @media (max-width: 999px) {
+        margin-bottom: 2em;
+      }
+
+      @media (max-width: 699px) {
+        margin-bottom: 1.25em;
+      }
 
       img {
         width: 200px;
