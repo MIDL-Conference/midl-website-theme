@@ -173,18 +173,37 @@ body {
   .tweets {
     margin: 50px auto 0 auto;
     width: 250px;
+    text-align: center;
 
     @media (max-width: 1199px) {
       display: none; /* there is no space for the twitter feed in the layout for mobile devices */
+    }
+
+    a.twitter-link {
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+
+      i {
+        margin-left: 8px;
+      }
     }
 
     a.twitter-follow-button, a.twitter-timeline {
       display: none; /* placeholder element, is replaced by an iframe by twitter */
     }
 
-    iframe {
+    iframe.twitter-follow-button-rendered {
+      display: inline-block;
+      position: relative !important;
+      top: 5px;
+      margin: 0 0 0 12px;
+    }
+
+    iframe.twitter-timeline-rendered {
       display: block;
-      margin: 0 auto 16px auto;
+      margin: 12px auto 16px auto !important;
     }
   }
 }

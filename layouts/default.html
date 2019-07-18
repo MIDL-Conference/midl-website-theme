@@ -36,13 +36,19 @@
             </ul>
         </nav>
 
-        {% if config.show_twitter_button or config.show_twitter_feed %}
+        {% if config.twitter is defined and (config.show_twitter_button or config.show_twitter_feed) %}
             <div class="tweets">
+                <a href="https://twitter.com/{{ config.twitter }}" class="twitter-link">
+                    <strong>MIDL on Twitter</strong>
+                    {% if not config.show_twitter_button %}
+                    <i class="fab fa-twitter"></i>
+                    {% endif %}
+                </a>
                 {% if config.show_twitter_button %}
                 <a data-lang="en"
                    data-dnt="true"
                    data-show-count="false"
-                   data-size="large"
+                   data-show-screen-name="false"
                    href="https://twitter.com/{{ config.twitter }}"
                    class="twitter-follow-button">Follow @{{ config.twitter }}</a>
                 {% endif %}
