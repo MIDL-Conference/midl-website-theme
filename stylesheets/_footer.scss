@@ -6,15 +6,17 @@
 
   @media (min-width: 900px) and (max-width: 1199px) {
     margin-bottom: -0.9em;
+    font-size: 92%;
   }
 
   @media (max-width: 899px) {
     margin-bottom: -0.4em;
+    font-size: 86%;
   }
 
   li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 0.625em;
 
     a {
       color: $text-color;
