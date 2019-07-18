@@ -19,10 +19,18 @@ body {
     margin: 0 0 13px 0;
 
     &.logo {
-      margin-bottom: 26px;
+      margin-bottom: 6vh;
 
       img {
         width: 200px;
+
+        @media (max-width: 999px) {
+          width: 175px;
+        }
+
+        @media (max-width: 699px) {
+          width: 150px;
+        }
       }
     }
   }
@@ -46,7 +54,7 @@ body {
     }
 
     @media (max-width: 699px) {
-      font-size: 16px;
+      font-size: 19px;
       margin-top: 6px;
     }
   }
@@ -60,11 +68,11 @@ body {
     line-height: 1.2;
 
     @media (max-width: 999px) {
-      font-size: 18px;
+      font-size: 19px;
     }
 
     @media (max-width: 699px) {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     sup {
@@ -72,10 +80,6 @@ body {
       top: -0.55em;
       padding-left: 1px;
     }
-  }
-
-  h2 {
-    margin-top: 6vh;
   }
 
   h3 {
