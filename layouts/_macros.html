@@ -1,11 +1,11 @@
-{% macro paper(title, authors, abstract=none, openreview=none, paper=none, video=none, code=none) -%}
+{% macro paper(title, authors, abstract=none, paper=none, openreview=none, video=none, code=none) -%}
 * <span class="title">
-    {% if openreview %}<a href="{{ openreview }}">{{ title }}</a>{% else %}{{ title }}{% endif %}
+    {% if paper %}<a href="{{ paper }}">{{ title }}</a>{% else %}{{ title }}{% endif %}
   </span>
   <span class="authors"> {{ authors }}</span>
   <ul class="links">
     {% if abstract %}<li><a class="toggle_visibility" data-selector=".abstract">abstract</a></li>{% endif -%}
-    {% if paper %}<li><a href="{{ paper }}">paper</a></li>{% endif -%}
+    {% if openreview %}<li><a href="{{ openreview }}">reviews</a></li>{% endif -%}
     {% if code %}<li><a href="{{ code }}">code</a></li>{% endif -%}
     {% if video %}<li><a href="{{ video }}">video</a></li>{% endif -%}
   </ul>
