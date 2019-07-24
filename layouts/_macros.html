@@ -4,7 +4,7 @@
   </span>
   <span class="authors"> {{ authors }}</span>
   <ul class="links">
-    {% if abstract %}<li><a class="toggle_visibility" data-selector=".abstract">abstract</a></li>{% endif -%}
+    {% if abstract %}<li><a class="toggle_visibility" data-selector=".abstract" data-level="3">abstract</a></li>{% endif -%}
     {% if openreview %}<li><a href="{{ openreview }}">reviews</a></li>{% endif -%}
     {% if code %}<li><a href="{{ code }}">code</a></li>{% endif -%}
     {% if video %}<li><a href="{{ video }}">video</a></li>{% endif -%}
