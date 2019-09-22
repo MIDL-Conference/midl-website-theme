@@ -28,7 +28,7 @@
 </div>
 {%- endmacro %}
 
-{% macro opengraphtag(name, default_content=none) -%}
+{% macro opengraphtag(name, default_content=none, prefix=none) -%}
   {%- if opengraph is defined and opengraph[name] is defined -%}
     {%- set content = opengraph[name] -%}
   {% elif config.opengraph is defined and config.opengraph[name] is defined -%}
@@ -38,6 +38,6 @@
   {%- endif -%}
 
   {%- if content -%}
-  <meta property="og:{{ name|e }}" content="{{ content|e }}">
+  <meta property="og:{{ name|e }}" content="{% if prefix %}{{ prefix|e }}{% endif %}{{ content|e }}">
   {%- endif -%}
 {%- endmacro -%}

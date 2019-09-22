@@ -9,10 +9,10 @@
         {% block metadata %}
             {% from "_macros.html" import opengraphtag with context %}
             {{ opengraphtag('type', default_content='website') }}
-            {{ opengraphtag('url', default_content=config.www + permalink) }}
+            {{ opengraphtag('url', default_content=permalink, prefix=config.www) }}
             {{ opengraphtag('title', default_content=title + ' - ' + config.title if title is defined else config.title) }}
             {{ opengraphtag('description') }}
-            {{ opengraphtag('image') }}
+            {{ opengraphtag('image', prefix=config.www) }}
         {% endblock %}
 
         {% block head %}{% endblock %}
