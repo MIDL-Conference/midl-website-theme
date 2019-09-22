@@ -10,7 +10,7 @@
             {% from "_macros.html" import opengraphtag with context %}
             {{ opengraphtag('type', default_content='website') }}
             {{ opengraphtag('url', default_content=config.www + permalink) }}
-            {{ opengraphtag('title', default_content=config.title) }}
+            {{ opengraphtag('title', default_content=title + ' - ' + config.title if title is defined else config.title) }}
             {{ opengraphtag('description') }}
             {{ opengraphtag('image') }}
         {% endblock %}
