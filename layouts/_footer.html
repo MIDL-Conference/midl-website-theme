@@ -10,7 +10,7 @@
             <a href="https://www.youtube.com/{{ config.youtube }}"><i class="fab fa-youtube" title="MIDL on YouTube"></i></a>
         </li>
         {% endif %}
-        {% if config.github %}
+        {% if config.github is defined %}
         <li>
             <a href="https://github.com/{{ config.github }}"><i class="fab fa-github" title="MIDL on GitHub"></i></a>
         </li>
