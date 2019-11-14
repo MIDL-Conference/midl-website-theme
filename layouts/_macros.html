@@ -28,6 +28,16 @@
 </div>
 {%- endmacro %}
 
+{% macro map(url, width=720, height=500) -%}
+<div class="google-maps">
+    <iframe src="{{ url }}"
+            width="{{ width }}"
+            height="{{ height }}"
+            frameborder="0"
+            allowfullscreen></iframe>
+</div>
+{%- endmacro %}
+
 {% macro opengraphtag(name, default_content=none, prefix=none) -%}
   {%- if opengraph is defined and opengraph[name] is defined -%}
     {%- set content = opengraph[name] -%}

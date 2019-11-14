@@ -308,6 +308,7 @@ iframe[src*="youtube"] {
   position: relative;
   overflow: hidden;
   padding-bottom: 75%;
+  margin: 2rem 0;
 
   iframe {
     position: absolute;
@@ -315,6 +316,7 @@ iframe[src*="youtube"] {
     left: 0;
     width: 100% !important;
     height: 100% !important;
+    border: 0;
   }
 }
 
