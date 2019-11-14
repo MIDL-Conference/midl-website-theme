@@ -304,6 +304,20 @@ iframe[src*="youtube"] {
   }
 }
 
+.google-maps {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 75%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
 .deadlines {
   ul {
     list-style: none;
