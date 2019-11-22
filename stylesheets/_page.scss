@@ -181,7 +181,7 @@ a {
   }
 }
 
-a.button {
+a.button, p.button a {
   $button-base-color: $primary-color !default;
   $button-color-top: lighten(saturate(adjust-hue($button-base-color, -1), 19.5), 14.35);
   $button-color-top-hover: lighten(saturate($button-color-top, 3.75), 2.35);
@@ -211,6 +211,11 @@ a.button {
     color: white;
     text-decoration: none;
   }
+}
+
+p.button {
+  padding: 5px 0;
+  text-align: center;
 }
 
 img {
