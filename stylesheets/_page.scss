@@ -516,6 +516,38 @@ iframe[src*="youtube"] {
     margin-top: 20px;
     margin-bottom: 12px;
   }
+
+  hr {
+    clear: both;
+  }
+}
+
+&.keynotes-without-details {
+  h2 {
+    padding-top: 36px;
+
+    img {
+      @extend img.align-left;
+      max-width: 25vw;
+      position: relative;
+      top: -36px;
+      margin-right: 42px;
+    }
+  }
+
+  h3 {
+    font-size: 17px;
+    margin-top: -2px;
+    margin-bottom: 17px;
+
+    & + h3 {
+      margin-top: -8px;
+    }
+  }
+
+  hr {
+    clear: both;
+  }
 }
 
 @import 'footer';
