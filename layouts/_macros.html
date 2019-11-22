@@ -38,6 +38,12 @@
 </div>
 {%- endmacro %}
 
+{% macro button(caption, url) -%}
+<p class="centered">
+  <a href="{{ url }}" class="button">{{ caption|e }}</a>
+</p>
+{%- endmacro %}
+
 {% macro opengraphtag(name, default_content=none, prefix=none) -%}
   {%- if opengraph is defined and opengraph[name] is defined -%}
     {%- set content = opengraph[name] -%}
