@@ -526,12 +526,32 @@ iframe[src*="youtube"] {
   h2 {
     padding-top: 36px;
 
+    @media (max-width: 1199px) {
+      padding-top: 24px;
+    }
+
+    @media (max-width: 899px) {
+      padding-top: 12px;
+    }
+
     img {
       @extend img.align-left;
       max-width: 25vw;
       position: relative;
       top: -36px;
       margin-right: 42px;
+
+      @media (max-width: 1199px) {
+        top: -24px;
+        margin-right: 36px;
+        margin-bottom: 22px;
+      }
+
+      @media (max-width: 899px) {
+        top: -10px;
+        margin-right: 32px;
+        margin-bottom: 24px;
+      }
     }
   }
 
