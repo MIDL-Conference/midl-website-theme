@@ -443,6 +443,9 @@ iframe[src*="youtube"] {
       border-bottom: 3px solid $color;
     }
 
+    .diamond {
+      @include sponsorship-level(#B9F2FF);
+    }
     .platinum {
       @include sponsorship-level(#E5E4E2);
     }
