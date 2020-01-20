@@ -486,7 +486,7 @@ iframe[src*="youtube"] {
   }
 }
 
-&.keynotes {
+&.keynotes, &.events {
   h2 {
     img {
       @extend img.align-right;
