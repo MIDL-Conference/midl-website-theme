@@ -19,7 +19,15 @@ h1 {
 
   &.midl {
     text-align: center;
-    margin-bottom: -4px;
+    margin-bottom: -6px;
+
+    @media (max-width: 1199px) {
+      margin-bottom: -8px;
+    }
+
+    @media (max-width: 899px) {
+      margin-bottom: -10px;
+    }
   }
 }
 
@@ -46,14 +54,14 @@ h2 {
 
   &.midl {
     text-align: center;
-    font-size: 32px;
+    margin-bottom: 36px;
 
     @media (max-width: 1199px) {
-      font-size: 28px;
+      margin-bottom: 30px;
     }
 
     @media (max-width: 899px) {
-      font-size: 24px;
+      margin-bottom: 24px;
     }
   }
 }
