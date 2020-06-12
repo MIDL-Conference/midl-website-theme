@@ -1,6 +1,6 @@
-{% macro paper(title, authors, abstract=none, paper=none, openreview=none, video=none, code=none) -%}
+{% macro paper(title, authors, abstract=none, paper=none, openreview=none, video=none, code=none, id=none) -%}
 * <span class="title">
-    {% if paper %}<a href="{{ paper }}">{{ title }}</a>{% else %}{{ title }}{% endif %}
+    {% if id %}{{ id }} - {% endif -%}{% if paper %}<a href="{{ paper }}">{{ title }}</a>{% else %}{{ title }}{% endif %}
   </span>
   <span class="authors"> {{ authors }}</span>
   <ul class="links">
