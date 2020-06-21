@@ -305,6 +305,10 @@ table.centered {
   color: lighten($primary-color, 4.6);
 }
 
+a.toggle_visibility {
+  cursor: pointer;
+}
+
 .youtube {
   margin: 2rem 0;
 }
@@ -415,10 +419,6 @@ iframe[src*="youtube"] {
         display: block;
         margin-top: 4px;
       }
-    }
-
-    a.toggle_visibility {
-      cursor: pointer;
     }
   }
 }
