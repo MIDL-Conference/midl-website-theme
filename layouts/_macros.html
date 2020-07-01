@@ -75,3 +75,8 @@
   <meta property="og:{{ name|e }}" content="{% if prefix %}{{ prefix|e }}{% endif %}{{ content|e }}">
   {%- endif -%}
 {%- endmacro -%}
+
+
+{% macro teaser(id) -%}
+  {% if id %} - <a href="https://youtu.be/{{ id }}">Teaser</a>{% endif %}
+{%- endmacro %}
