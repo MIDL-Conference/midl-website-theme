@@ -598,6 +598,10 @@ iframe[src*="calendar.google.com"] {
 &.program {
   h2 {
     font-weight: bold;
+
+    @media (max-width: 899px) {
+      margin-bottom: -6px;
+    }
   }
 
   h3 {
@@ -617,7 +621,7 @@ iframe[src*="calendar.google.com"] {
     }
 
     @media (max-width: 899px) {
-      margin-top: 26px;
+      margin-top: 32px;
     }
   }
 }
