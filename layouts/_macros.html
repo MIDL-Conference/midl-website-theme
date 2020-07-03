@@ -31,18 +31,12 @@
 {%- endmacro %}
 
 {% macro presentation(youtube_id, pdf_url, width=720, height=405) -%}
-  <iframe width="{{ width }}"
-          height="{{ height }}"
-          src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-  </iframe>
+  {{ youtube(youtube_id) }}
   <object data="{{ pdf_url }}"
           width="{{ width }}"
-          height="{{ height }}">
-      <p>Your browser doesn't embed PDFs.
-         <a href="{{ pdf_url }}">Download slides.</a></p>
+          height="{{ height }}" class="embedded-pdf">
+      <p>Your browser doesn't embed PDFs.</p>
+      <p><a href="{{ pdf_url }}">Download slides.</a></p>
   </object>
 {%- endmacro %}
 

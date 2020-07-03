@@ -171,7 +171,7 @@ body {
   }
 
   .tweets {
-    margin: 50px auto 0 auto;
+    margin: 60px auto 0 auto;
     width: 250px;
     text-align: center;
 
@@ -207,7 +207,12 @@ body {
 
     iframe.twitter-timeline-rendered {
       display: block;
-      margin: 12px auto 16px auto !important;
+      margin: 16px auto !important;
+      opacity: 0.85;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

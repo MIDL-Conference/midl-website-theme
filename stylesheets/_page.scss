@@ -309,6 +309,10 @@ a.toggle_visibility {
   cursor: pointer;
 }
 
+iframe, object {
+  max-width: 100%;
+}
+
 .youtube {
   margin: 2rem 0;
 }
@@ -320,6 +324,10 @@ iframe[src*="youtube"] {
     width: 84vw;
     height: 47.25vw;
   }
+}
+
+iframe[src*="calendar.google.com"] {
+  margin-bottom: 1.5rem;
 }
 
 .google-maps {
@@ -587,45 +595,58 @@ iframe[src*="youtube"] {
   }
 }
 
-&.paper-page {
-  .paper_abstract {
-    display: none;
-    font-size: 90%;
-    line-height: 1.35;
-    text-align: justify;
-    margin-top: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 4px;
-
-    .actions {
-      display: block;
-      text-align: center;
-      margin-top: 4px;
-    }
+&.program {
+  h2 {
+    font-weight: bold;
   }
-  .paper_qa {
-    display: none;
-    line-height: 1.35;
-    text-align: center;
-    margin-top: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 4px;
 
-    .actions {
+  h3 {
+    em {
+      font-style: normal;
+      font-family: 'Roboto Condensed', Roboto, Lato, Verdana, sans-serif;
+      font-size: 16px;
+      color: #222222;
       display: block;
-      text-align: center;
-      margin-top: 4px;
+      padding-left: 0.1em;
+      margin-top: 8px;
+
+      @media (max-width: 899px) {
+        font-size: 15px;
+        margin-top: 6px;
+      }
     }
-  }
-  h2, h3 {
-    font-family: 'Lato', 'Trebuchet MS', sans-serif;
-    text-align: center;
-    font-weight: normal;
-    margin-top: 26px;
-    margin-bottom: 13px;
-    line-height: 1.2;
   }
 }
+
+&.paper {
+  h2, h3 {
+    text-align: center;
+  }
+
+  .details {
+    text-align: center;
+
+    .abstract, .schedule {
+      display: none;
+      line-height: 1.35;
+      text-align: center;
+      margin-top: 1em;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 1em;
+
+      .actions {
+        display: block;
+        text-align: center;
+        margin-top: 1em;
+      }
+    }
+
+    .abstract {
+      font-size: 90%;
+      text-align: justify;
+    }
+  }
+}
+
 @import 'footer';
