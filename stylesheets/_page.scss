@@ -615,6 +615,10 @@ iframe[src*="calendar.google.com"] {
         margin-top: 6px;
       }
     }
+
+    @media (max-width: 899px) {
+      margin-top: 26px;
+    }
   }
 }
 
