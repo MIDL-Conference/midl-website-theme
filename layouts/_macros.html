@@ -32,12 +32,14 @@
 
 {% macro presentation(youtube_id, pdf_url, width=720, height=405) -%}
   {{ youtube(youtube_id) }}
-  <object data="{{ pdf_url }}"
-          width="{{ width }}"
-          height="{{ height }}" class="embedded-pdf">
-      <p>Your browser doesn't embed PDFs.</p>
-  </object>
-  <center><p><a href="{{ pdf_url }}">Download slides.</a></p></center>
+  <p>
+    <object data="{{ pdf_url }}"
+            width="{{ width }}"
+            height="{{ height }}" class="embedded-pdf">
+      Can't display slides, your browser doesn't support embedding PDFs. You can still download the slides:
+    </object>
+  </p>
+  <p class="centered"><a href="{{ pdf_url }}">Download slides</a></p>
 {%- endmacro %}
 
 {% macro map(url, width=720, height=500) -%}
