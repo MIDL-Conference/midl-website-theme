@@ -7,6 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         {% block metadata %}
+            {% if config.summary is defined and permalink == '/' %}
+            <meta name="description" content="{{ config.summary|e }}">
+            {% endif %}
+
             {% from "_macros.html" import opengraphtag with context %}
             {{ opengraphtag('type', default_content='website') }}
             {{ opengraphtag('url', default_content=permalink, prefix=config.www) }}
@@ -29,7 +33,11 @@
         {% block head %}{% endblock %}
 
         <link rel="icon" href="/assets/logos/favicon.png">
-        <title>{% if title is defined %} {{ title|e }} | {% endif %}{{ config.title|e }}</title>
+        <title>
+            {% if title is defined %} {{ title|e }} | {% endif %}
+            {{ config.title|e }}
+            {% if title is not defined %} - Medical Imaging with Deep Learning{% endif %}
+        </title>
     </head>
     <body>
     {% block body %}{% endblock %}
