@@ -1,4 +1,4 @@
-{% macro paper(title, authors, proceedings=none, abstract=none, paper=none, openreview=none, video=none, code=none, id=none, teaser=none, pdf=none) -%}
+{% macro paper(title, authors, abstract=none, paper=none, openreview=none, video=none, code=none, id=none, teaser=none, pdf=none, proceedings=none) -%}
 * <span class="title">
     {% if id %}{{ id }} - {% endif -%}{% if paper %}<a href="{{ paper }}">{{ title }}</a>{% else %}{{ title }}{% endif %}
   </span>
