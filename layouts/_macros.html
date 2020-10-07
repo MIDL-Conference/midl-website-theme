@@ -77,3 +77,20 @@
 {% macro teaser(id) -%}
   {% if id %} - <a href="https://youtu.be/{{ id }}">Teaser</a>{% endif %}
 {%- endmacro %}
+
+{% macro newsletter() -%}
+<form action="https://midl.us4.list-manage.com/subscribe/post?u=1c1d967287de9a0c0769fdd1b&amp;id=8b80f8a58e" method="post" class="newsletter-signup-form" target="_blank">
+  <h4>Newsletter</h4>
+  <p>
+    Subscribe to our newsletter to receive regular updates about Medical Imaging with Deep Learning via email.
+  </p>
+  <p>
+    <label for="newsletter-email">Email address:</label>
+    <input type="email" value="" name="EMAIL" id="newsletter-email" placeholder="email address" required>
+    <input type="submit" value="Subscribe" name="subscribe">
+  </p>
+  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+    <input type="text" name="b_1c1d967287de9a0c0769fdd1b_8b80f8a58e" tabindex="-1" value="">
+  </div>
+</form>
+{%- endmacro %}
