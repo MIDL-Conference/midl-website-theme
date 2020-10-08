@@ -78,12 +78,21 @@
   {% if id %} - <a href="https://youtu.be/{{ id }}">Teaser</a>{% endif %}
 {%- endmacro %}
 
-{% macro newsletter() -%}
+{% macro newsletter(ask_for_name=true) -%}
 <form action="https://midl.us4.list-manage.com/subscribe/post?u=1c1d967287de9a0c0769fdd1b&amp;id=8b80f8a58e" method="post" class="newsletter-signup-form" target="_blank">
-  <h4>Newsletter</h4>
+  <h3>Newsletter</h3>
   <p>
     Subscribe to our newsletter to receive regular updates about Medical Imaging with Deep Learning via email.
   </p>
+  {% if ask_for_name %}
+  <p>
+    <label for="newsletter-fname">First name:</label>
+    <input type="text" value="" name="FNAME" id="newsletter-fname" placeholder="first name">
+
+    <label for="newsletter-lname">Last name:</label>
+    <input type="text" value="" name="LNAME" id="newsletter-lname" placeholder="last name">
+  </p>
+  {% endif %}
   <p>
     <label for="newsletter-email">Email address:</label>
     <input type="email" value="" name="EMAIL" id="newsletter-email" placeholder="email address" required>
