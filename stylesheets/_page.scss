@@ -334,8 +334,15 @@ iframe[src*="youtube"] {
   width: 420px;
   margin: 40px auto 0 auto;
   padding: 20px 30px;
-  border: 1px solid lightgray;
+  border: 1px solid #DCDCDC;
   border-radius: 6px;
+
+  &.inline {
+    width: auto;
+    margin: 25px 0 15px 0;
+    padding: 0;
+    border: none;
+  }
 
   @media (max-width: 540px) {
     width: auto;
