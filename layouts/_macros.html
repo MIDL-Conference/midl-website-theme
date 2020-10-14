@@ -80,7 +80,7 @@
   {% if id %} - <a href="https://youtu.be/{{ id }}">Teaser</a>{% endif %}
 {%- endmacro %}
 
-{% macro newsletter(referral_code, ask_for_name=true, inline=false) -%}
+{% macro newsletter(referral_code, ask_for_name=true, inline=true) -%}
 <form action="https://midl.us4.list-manage.com/subscribe/post?u=1c1d967287de9a0c0769fdd1b&amp;id=8b80f8a58e"
       method="post"
       class="newsletter-signup-form{% if inline %} inline{% endif %}"
