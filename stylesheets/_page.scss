@@ -313,7 +313,7 @@ a.toggle_visibility {
   cursor: pointer;
 }
 
-iframe, object {
+iframe, object, video {
   max-width: 100%;
 }
 
@@ -328,6 +328,10 @@ iframe[src*="youtube"] {
     width: 84vw;
     height: 47.25vw;
   }
+}
+
+.video, .cloudflare-stream {
+  margin: 1rem 0;
 }
 
 .newsletter-signup-form {

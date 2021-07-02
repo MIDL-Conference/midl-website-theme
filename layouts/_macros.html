@@ -46,8 +46,8 @@
 {%- endmacro %}
 
 {% macro video(video_url, width=720, height=405) -%}
-<div>
-  <video width="{{ width }}" height="{{ height }}" controls>
+<div class="video">
+  <video controls style="width: 100%; aspect-ratio: {{ width / height }};">
     <source src="{{ video_url }}" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -65,7 +65,7 @@
 {%- endmacro %}
 
 {% macro cloudflare_video(video_id, width=720, height=405) -%}
-<div>
+<div class="cloudflare-stream">
   <iframe src="https://iframe.videodelivery.net/{{ video_id }}"
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           width="{{ width }}"
@@ -114,7 +114,6 @@
   <meta property="og:{{ name|e }}" content="{% if prefix %}{{ prefix|e }}{% endif %}{{ content|e }}">
   {%- endif -%}
 {%- endmacro -%}
-
 
 {% macro teaser(id) -%}
   {% if id %} - <a href="https://youtu.be/{{ id }}">Teaser</a>{% endif %}
