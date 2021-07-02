@@ -54,7 +54,6 @@
 </div>
 {%- endmacro %}
 
-
 {% macro html_presentation(youtube_id, pdf_url, width=720, height=405) -%}
 {{ video(youtube_id) }}
 
@@ -64,6 +63,27 @@
   Can't display slides, your browser doesn't support embedding PDFs. You can still download the slides:
 </object>
 {%- endmacro %}
+
+{% macro cloudflare_video(video_id, width=720, height=405) -%}
+<div>
+  <iframe src="https://iframe.videodelivery.net/{{ video_id }}"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          width="{{ width }}"
+          height="{{ height }}"
+          allowfullscreen="true"></iframe>
+</div>
+{%- endmacro %}
+
+{% macro cloudflare_presentation(video_id, pdf_url, width=720, height=405) -%}
+{{ cloudflare_video(video_id) }}
+
+<object data="{{ pdf_url }}"
+        width="{{ width }}"
+        height="{{ height }}" class="embedded-pdf">
+  Can't display slides, your browser doesn't support embedding PDFs. You can still download the slides:
+</object>
+{%- endmacro %}
+
 
 {% macro map(url, width=720, height=500) -%}
 <div class="google-maps">
