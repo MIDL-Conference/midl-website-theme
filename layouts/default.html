@@ -11,6 +11,7 @@
 
 {% block body %}
 <div id="content">
+    {% if sidebar is not defined or sidebar %}
     <div id="sidebar">
         <h1>
             <a href="/" alt="{{ config.title|e }}">
@@ -67,6 +68,7 @@
             <script src="https://platform.twitter.com/widgets.js" charset="utf-8" async></script>
         {% endif %}
     </div>
+    {% endif %}
     <main>
         <div id="page"{% if page_class is defined %} class="{{ page_class }}"{% endif %}>
             {{ content }}
