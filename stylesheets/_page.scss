@@ -600,11 +600,18 @@ iframe[src*="calendar.google.com"] {
   }
 
   h4 {
-    font-size: 90%;
+    font-size: 100%;
     font-weight: bold;
-    font-family: 'Roboto Slab', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Roboto, Helvetica, Arial, sans-serif;
     margin-top: 20px;
     margin-bottom: 12px;
+
+    .datetime {
+      display: block;
+      font-weight: normal;
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      padding-top: 5px;
+    }
   }
 
   hr {
