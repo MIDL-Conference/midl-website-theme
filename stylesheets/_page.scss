@@ -336,6 +336,12 @@ iframe[src*="youtube"] {
   border: 1px solid #F0F0F0;
 }
 
+.abstract {
+  text-align: justify;
+  text-justify: auto;
+  hyphens: auto;
+}
+
 .newsletter-signup-form {
   width: 420px;
   margin: 40px auto 0 auto;
