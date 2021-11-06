@@ -267,6 +267,21 @@ pre {
   }
 }
 
+.table {
+  th {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  td {
+    padding-right: 24px;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
 table.grid {
   border-collapse: collapse;
   margin-bottom: 13px;
