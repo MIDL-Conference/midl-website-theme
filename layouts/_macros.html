@@ -105,6 +105,12 @@
 </p>
 {%- endmacro %}
 
+{% macro button_blank(caption, url) -%}
+<p class="button">
+  <a href="{{ url }}" target=“_blank”>{{ caption|e }}</a>
+</p>
+{%- endmacro %}
+
 {% macro opengraphtag(name, default_content=none, prefix=none) -%}
   {%- if opengraph is defined and opengraph[name] is defined -%}
     {%- set content = opengraph[name] -%}
